@@ -4,7 +4,11 @@ import Plus from './Plus';
 import Minus from './Minus';
 import Multiply from './Multiply';
 import Divide from './Divide';
+import Numbers from './Numbers';
 import './App.css';
+
+import { Button } from 'reactstrap';
+
 
 class App extends Component {
   render() {
@@ -20,6 +24,7 @@ class App extends Component {
           <Multiply/>
           <Divide/>
         </p>
+        <Numbers/>
       </div>
     );
   }
