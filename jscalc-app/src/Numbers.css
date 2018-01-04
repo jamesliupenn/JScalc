@@ -1,0 +1,41 @@
+.button {
+	padding-bottom: 30px;
+	font-size: 24px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color: #fff;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+	margin-left: 5px;
+
+}
+
+.button:hover, .wide:hover {background-color: #3e8e41}
+
+.button:active, .wide:hover {
+	background-color: #3e8e41;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+
+.other {
+	background-color: #E29403;
+	width: 65px;
+}
+
+.num {
+	background-color: #E9D106;
+	width: 65px;
+}
+
+.zero {
+	width: 165px;
+}
+
+.side {
+	background-color: #E29403;
+	width: 65px;
+}
+
