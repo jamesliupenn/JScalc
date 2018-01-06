@@ -1,4 +1,30 @@
+.container {
+	grid-template-rows: repeat(4, 100px);
+	grid-template-columns: repeat(4, minmax(100px, 1fr));
+	display: grid;
+}
 .button {
+	font-size: 30px;
+	border-radius: 10px;
+	width: 65px;
+	height: 65px;
+	color: #fff;
+	outline: none;
+	background-color: #E9D106;
+}
+
+.button:hover {
+	background-color: #3e8e41
+}
+
+
+.button:active {
+	background-color: #3e8e41;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+
+/*.button {
 	padding-bottom: 30px;
 	font-size: 24px;
 	text-align: center;
@@ -39,3 +65,4 @@
 	width: 65px;
 }
 
+*/

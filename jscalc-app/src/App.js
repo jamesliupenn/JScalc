@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import Plus from './Plus';
-import Minus from './Minus';
-import Multiply from './Multiply';
-import Divide from './Divide';
 import Numbers from './Numbers';
 import Display from './Display';
 import './App.css';
