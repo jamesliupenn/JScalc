@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Badge, Button, Container, Row, Col } from 'reactstrap';
 import './Numbers.css';
+import Display from './Display';
 
 
 class Numbers extends Component {
@@ -20,14 +21,15 @@ class Numbers extends Component {
 		// Set limits on how many digits this calculator accepts
 		if (length < 10) {
 			this.state.selected.push(selected);
+			// Update display to show the selected numbers
 			this.display = this.state.selected;
 		}
 		this.setState({selected:[...this.state.selected]});
 	}
 
 	onOpsClick(selected) {
-		this.stored += this.state.selected.join("") + selected;
-		this.state = {selected: []};
+		this.stored = this.state.selected.join("") + selected;
+		this.setState({selected: []});
 	}
 
 	onClrClick() {
@@ -48,12 +50,14 @@ class Numbers extends Component {
 		this.setState(() => {
 			return this.display = eval(this.stored);
 		});
+		this.stored = eval(this.stored);
+		console.log(this.stored);
 	}
 
 	render() {
 		return (
 			<div className="row justify-content-center">
-			<p>{this.display}</p>
+			<div className="display">{this.display}</div>
 			<Container>
 				<div><button className="button" onClick={() => this.onNumClick(7)}>7</button></div>
 				<div><button className="button" onClick={() => this.onNumClick(8)}>8</button></div>

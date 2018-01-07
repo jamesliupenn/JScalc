@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import Numbers from './Numbers';
-import Display from './Display';
 import './App.css';
 
 import { Button } from 'reactstrap';
@@ -17,7 +16,6 @@ class App extends Component {
         </header>
         <p className="App-intro">
         </p>
-        <Display/>
         <Numbers/>
       </div>
     );

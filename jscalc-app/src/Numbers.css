@@ -24,6 +24,16 @@
 	transform: translateY(4px);
 }
 
+.display {
+	height: 50px;
+	width: 350px;
+	font-size: 30px;
+	text-align: right;
+	border-style: solid;
+	margin-bottom: 30px;
+	padding-right: 6px;
+}
+
 /*.button {
 	padding-bottom: 30px;
 	font-size: 24px;
