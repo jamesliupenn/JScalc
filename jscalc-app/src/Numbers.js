@@ -8,7 +8,7 @@ class Numbers extends Component {
 	constructor (props) {
 		super(props);
 		this.state = {selected: []};
-		this.stored = "";
+		this.temp = "";
 		this.display = "";
 		this.onNumClick = this.onNumClick.bind(this);
 		this.onOpsClick = this.onOpsClick.bind(this);
@@ -17,6 +17,7 @@ class Numbers extends Component {
 	}
 
 	onNumClick(selected) {
+		this.temp += selected;
 		const length = this.state.selected.length;
 		// Set limits on how many digits this calculator accepts
 		if (length < 10) {
@@ -28,7 +29,7 @@ class Numbers extends Component {
 	}
 
 	onOpsClick(selected) {
-		this.stored = this.state.selected.join("") + selected;
+		this.temp += selected;
 		this.setState({selected: []});
 	}
 
@@ -37,21 +38,18 @@ class Numbers extends Component {
 			return this.state.selected = [];
 		});
 		this.setState(() => {
-			return this.stored = "";
+			return this.display = "0";
 		});
 		this.setState(() => {
-			return this.display = "0";
+			return this.temp = "";
 		});
 	}
 
 	onEqlClick() {
-		this.stored += this.state.selected.join("");
 		// Update the display with the evaluated string of calculation
 		this.setState(() => {
-			return this.display = eval(this.stored);
+			return this.display = eval(this.temp);
 		});
-		this.stored = eval(this.stored);
-		console.log(this.stored);
 	}
 
 	render() {
